@@ -18,7 +18,7 @@
           v-show="shouldShowTextInput"
           v-bind:disabled="isLexProcessing"
           v-model="textInput"
-          v-on:keyup.enter.stop="postTextMessage"
+          v-on:keydown.enter="postTextMessage"
           v-on:focus="onTextFieldFocus"
           v-on:blur="onTextFieldBlur"
           @input="onKeyUp"
@@ -196,7 +196,8 @@ export default {
         this.isTextFieldFocused = false;
       }
     },
-    onKeyUp() {
+    onKeyUp(event) {
+      if (event.keyCode !== 13) return;
       this.$store.dispatch('sendTypingEvent');
     },
     setInputTextFieldFocus() {
