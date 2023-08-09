@@ -1,13 +1,9 @@
-/* Example custom css file for lex-web-ui. Entire file is commented out as a default. Uncomment and
- adjust as needed.
-
 .toolbar.theme--dark {
-    background-color: #2b2b2b !important;
+    background-color: navy !important;
 }
 
 .toolbar__title {
-  font-family:"Sans-serif" !important;
-  font-size: 1.875em !important;
+  font-size: 1.2em !important;
   color: #ffffff !important;
 }
 
@@ -20,7 +16,7 @@
 }
 
 .message-human .message-bubble {
-    background-color: #afcffa !important;
+    background-color: lightblue !important;
 }
 
 .message-bubble p {
@@ -84,8 +80,14 @@
 
 button.min-button {
     border-radius: 60px;
+    background-color: blue !important;
+    border-color: blue !important;
 }
 
-.message-button {
-    display: none;
+div.menu,.nav-buttons,.localeInfo {
+    display: none !important;
+}
+
+.feedback-state{
+		display:none !important;
 }
